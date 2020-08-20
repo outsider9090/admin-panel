@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Area</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/persian-datepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+
+    <main>
+        <div class="sidenav">
+            <a href="#"><i class="fa fa-dashboard mx-1"></i> داشبورد</a>
+        </div>
+
+
+        <div class="dash-content">
+            <div class="container">
+                <div class="row">
+                    <form action="" method="post" id="form1">
+                        <fieldset>
+                            <h3 class="form-text">فرم نمونه</h3>
+                        </fieldset>
+                        <br>
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-2 col-form-label">نام</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" id="inputName">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPhone" class="col-sm-2 col-form-label">شماره تماس</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputPhone" name="phone" maxlength="11"
+                                onkeyup="this.value = this.value.replace(/[^\d]+/g, '');" style="direction: ltr;">
+                                <span class="invalid-feedback" role="alert" id="inputPhoneErr">
+                                  <strong>شماره تماس باید 11 رقم باشد!</strong>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputCmd" class="col-sm-2 col-form-label">کد</label>
+                        <div class="col-sm-10">
+                            <textarea name="cmd" class="form-control" id="inputCmd" cols="30" rows="10"></textarea>
+                            <span class="invalid-feedback" role="alert" id="inputCmdErr">
+                              <strong>مقدار کد را وارد کنید!</strong>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputDate" class="col-sm-2 col-form-label">تاریخ</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control dateTime" id="inputDate" style="text-align: left;"/>
+                        <span class="invalid-feedback" role="alert" id="inputDateErr">
+                          <strong>مقدار تاریخ را انتخاب کنید!</strong>
+                      </span>
+                  </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputTime" class="col-sm-2 col-form-label">زمان</label>
+                <div class="col-sm-10">
+                    <input type="time" class="form-control" step="1" id="inputTime">
+                    <span class="invalid-feedback" role="alert" id="inputTimeErr">
+                      <strong>مقدار زمان را انتخاب کنید!</strong>
+                  </span>
+              </div>
+          </div>
+          <input type="hidden" name="time">
+
+          <div class="form-group row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success btn-block pull-left" id="submit_btn">
+                    ارسال <i class="fa fa-spinner" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+</div>
+</div>
+</main>
+
+
+
+
+<footer>
+</footer>
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/persian-date.min.js"></script>
+<script type="text/javascript" src="js/persian-datepicker.min.js"></script>
+<script type="text/javascript" src="js/jalali-moment.browser.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".dateTime").pDatepicker({
+            calendarType: 'persian',
+            format: 'YYYY-MM-DD',
+            autoClose: true,
+            navigator:{
+                scroll: false
+            }
+        });
+    });
+</script>
+</body>
+</html>

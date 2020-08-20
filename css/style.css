@@ -1,0 +1,236 @@
+/*-------------- RESET STYLE ------------------ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/*-------------- RESET STYLE ------------------ */
+@font-face {
+    font-family: 'Samim';
+    src: url('../fonts/Samim.eot'); /* IE9 Compat Modes */
+    src:  url('../fonts/Samim.ttf') format('truetype'),
+    url('../fonts/Samim.eot') format('eot'),
+    url('../fonts/Samim.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iranyekanwebregular';
+    src: url('../fonts/iranyekanwebregular.eot'); /* IE9 Compat Modes */
+    src:  url('../fonts/iranyekanwebregular.ttf') format('truetype'),
+    url('../fonts/iranyekanwebregular.eot') format('eot'),
+    url('../fonts/iranyekanwebregular.woff') format('woff');
+}
+
+*,
+*:before,
+*:after {
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+html[dir="rtl"] .icons {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+}
+
+body {
+    font-family: iranyekanwebregular , Samim, sans-serif, Arial, Helvetica;
+    background: #fafafa;
+    line-height: 1.6;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #757575;
+    font-size: 0.875rem;
+    font-family: 'Samim', sans-serif, Arial, Helvetica;
+    padding: 10px;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #757575;
+    font-size: 0.875rem;
+    font-family: 'Samim', sans-serif, Arial, Helvetica;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #757575;
+    font-size: 0.875rem;
+    padding: 10px;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #757575;
+    font-size: 0.875rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* styles */
+main{
+    width: 85%;
+    float: left;
+}
+.navbar{
+    height: 55px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    padding: 20px 10px;
+    text-align: right;
+    background-color: #3182ce;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #eeeeee;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.dash-content{
+    padding: 30px;
+}
+
+.dash-content form{
+    padding: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px #bdbdbd;
+    text-align: right;
+
+}
+
+.masked:after {
+    content: '| \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 | \00a0 |';
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    font-size: 1rem;
+    letter-spacing: 2.6px;
+}
+
+.masked {
+    position: relative;
+}
+
+.masked input {
+    font-size: 1rem;
+    letter-spacing: 10px;
+    padding-left: 4px;
+}
+
+#inputPhoneErr , #inputDateErr , #inputTimeErr , #inputCmdErr{
+    display: none;
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* Responsive */
+
